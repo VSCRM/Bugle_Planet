@@ -1,16 +1,146 @@
-# React + Vite
+# 📰 Bugle Planet — News Aggregator SPA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bugle Planet — це сучасний новинний агрегатор, розроблений як Single Page Application (SPA) на базі бібліотеки React 19. Проєкт створено в рамках курсової роботи, він демонструє принципи компонентного програмування, ефективного управління станом та швидкої збірки за допомогою Vite.
 
-Currently, two official plugins are available:
+[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://vscrm.github.io/Bugle_Planet/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![React](https://img.shields.io/badge/React-19-blue)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-latest-646CFF)](https://vitejs.dev/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Основні особливості
 
-## React Compiler
+* **Блискавична швидкість**: Завдяки використанню Vite та Virtual DOM
+* **Глобальний стан**: Авторизація та дані користувача контролюються через React Context API
+* **Адаптивний дизайн**: Інтерфейс побудований за допомогою Tailwind CSS, що забезпечує ідеальний вигляд на десктопах та смартфонах
+* **Надійна маршрутизація**: Використання `HashRouter` для коректної роботи на GitHub Pages без помилок 404
+* **Атомарна структура**: Компоненти розділені за принципом повторного використання
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠 Технологічний стек
 
-## Expanding the ESLint configuration
+| Технологія | Призначення |
+|------------|-------------|
+| **React 19** | Frontend framework (Hooks, Context API) |
+| **Vite** | Build tool та dev server |
+| **Tailwind CSS** | Utility-first CSS framework |
+| **Lucide React** | Набір іконок |
+| **React Router Dom** | Маршрутизація |
+| **GitHub Pages** | Deployment та хостинг |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 Структура проєкту
+
+```
+Bugle_Planet/
+│
+├── src/
+│   ├── components/     # Атомарні компоненти
+│   │   ├── Header.jsx
+│   │   ├── Footer.jsx
+│   │   └── NewsCard.jsx
+│   │
+│   ├── context/        # Глобальне управління станом
+│   │   └── AuthContext.jsx
+│   │
+│   ├── pages/          # Сторінки додатку
+│   │   ├── Home.jsx
+│   │   ├── Search.jsx
+│   │   ├── Profile.jsx
+│   │   └── Login.jsx
+│   │
+│   ├── assets/         # Статичні ресурси
+│   │   ├── logo.svg
+│   │   └── images/
+│   │
+│   ├── App.jsx         # Основний файл конфігурації маршрутів
+│   └── main.jsx        # Точка входу
+│
+├── public/             # Публічні файли
+├── index.html          # HTML шаблон
+├── package.json        # Залежності проєкту
+├── vite.config.js      # Конфігурація Vite
+├── tailwind.config.js  # Конфігурація Tailwind
+└── README.md           # Документація
+```
+
+## ⚙️ Встановлення та запуск
+
+### Передумови
+
+Переконайтеся, що у вас встановлено:
+- Node.js (версія 16 або вище)
+- npm або yarn
+
+### Кроки встановлення
+
+1. **Клонуйте репозиторій:**
+   ```bash
+   git clone https://github.com/VSCRM/Bugle_Planet.git
+   ```
+
+2. **Перейдіть у папку проєкту:**
+   ```bash
+   cd Bugle_Planet
+   ```
+
+3. **Встановіть залежності:**
+   ```bash
+   npm install
+   ```
+
+4. **Запустіть режим розробки:**
+   ```bash
+   npm run dev
+   ```
+
+5. **Відкрийте браузер:**
+   
+   Перейдіть за адресою `http://localhost:5173`
+
+### Доступні команди
+
+```bash
+npm run dev          # Запуск dev сервера
+npm run build        # Збірка для production
+npm run preview      # Попередній перегляд production збірки
+npm run deploy       # Деплой на GitHub Pages
+```
+
+## 📊 Планування розробки
+
+Проєкт реалізовано з урахуванням фонду робочого часу на 2026 рік, що становить **219 робочих днів**. Це дозволило детально пропрацювати архітектуру та забезпечити стабільну роботу системи маршрутизації.
+
+### Етапи розробки
+
+- ✅ Проєктування архітектури
+- ✅ Налаштування інфраструктури (Vite, Tailwind)
+- ✅ Розробка атомарних компонентів
+- ✅ Реалізація маршрутизації
+- ✅ Управління глобальним станом
+- ✅ Адаптивний дизайн
+- ✅ Деплой на GitHub Pages
+
+## 🔗 Живе демо
+
+Ви можете переглянути працюючий проєкт за посиланням:
+
+**🌐 [https://vscrm.github.io/Bugle_Planet/](https://vscrm.github.io/Bugle_Planet/)**
+
+## 📝 Ліцензія
+
+Цей проєкт ліцензовано під [MIT License](LICENSE) - дивіться файл LICENSE для деталей.
+
+## 👨‍💻 Автор
+
+**Розроблено студентом групи ІП-23-1 
+Кручкевичем Богданом - https://github.com/VSCRM/Bugle_Planet.git**
+
+Курсова робота з дисципліни "Технологія компонентного ПЗ для веб"
+
+📅 2026 рік
+
+---
+
+<div align="center">
+  
+**Зроблено з React**
+
+</div>
